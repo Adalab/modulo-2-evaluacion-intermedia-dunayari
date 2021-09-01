@@ -19,11 +19,13 @@ function handleButton() {
   } else if (playerValue > 100) {
     clue.value = "El número debe estar entre 1 y 100";
   }
+  incrementClick();
 }
 let countClick = 0;
 
 function incrementClick() {
-  updateDisplay(countClick++);
+  countClick++;
+  updateDisplay(countClick);
 }
 function updateDisplay(val) {
   attempsNumber.value = val;
